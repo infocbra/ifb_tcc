@@ -15,7 +15,7 @@
 %% other students from Federal University of Pernambuco who contributed
 %% to the RiSE template development.
 
-\ProvidesClass{ifbtcc}[2017/04/19]
+\ProvidesClass{ifbthesis}[2017/04/19]
 %\input{aboutufpethesis.txt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -524,7 +524,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
     {{\normalsize \bfseries{\@texttype}}}\\
   \end{center}
   \vspace{0.2cm}
-  \includegraphics[width=1cm]{ifblogo} \\
+  \includegraphics[width=3cm]{ifblogo} \\
   \if\@language0
     {\fontfamily{times}\selectfont \tiny \@universitypt\\}
   \else
