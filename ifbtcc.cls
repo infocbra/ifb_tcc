@@ -15,7 +15,7 @@
 %% other students from Federal University of Pernambuco who contributed
 %% to the RiSE template development.
 
-\ProvidesClass{risethesis}[2008/05/06]
+\ProvidesClass{ifbtcc}[2017/04/19]
 %\input{aboutufpethesis.txt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -254,13 +254,13 @@
 
 \def\universitypt#1{%
   \gdef\@universitypt{#1}}
-\def\@universitypt{Universidade Federal de Pernambuco}
+\def\@universitypt{Instituto Federal de Brasília}
 
 \def\universityen#1{%
   \gdef\@universityen{#1}}
-\def\@universityen{Federal University of Pernambuco}
+\def\@universityen{Federal Institute of Brasilia}
 
-\def\universitylogo{ufpelogo.tex}
+\def\universitylogo{ifblogo.tex}
 
 \let\@showinstitute=0
 \def\institutept#1{%
@@ -524,7 +524,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
     {{\normalsize \bfseries{\@texttype}}}\\
   \end{center}
   \vspace{0.2cm}
-  \includegraphics[width=1cm]{ufpelogo} \\
+  \includegraphics[width=1cm]{ifblogo} \\
   \if\@language0
     {\fontfamily{times}\selectfont \tiny \@universitypt\\}
   \else
