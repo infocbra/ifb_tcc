@@ -640,9 +640,8 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \noindent
-  Tese de doutorado apresentada por \textbf{\@author} ao programa de Pós-Graduação em
-  Ciência da Computação do Centro de Informática da Universidade Federal de
-  Pernambuco, sob o título \textbf{\@title}, orientada pelo \textbf{Prof.
+  Trabalho de Graduação apresentada por \textbf{\@author} ao programa de Graduação em
+  Ciência da Computação do Instituto Federal de Brasília, sob o título \textbf{\@title}, orientada pelo \textbf{Prof.
   \@adviser} e aprovada pela banca examinadora formada pelos professores:
   
   \vspace{5\baselineskip}
@@ -650,28 +649,28 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \begin{center}
   
   -----------------------------------------------------------------------\\
-  Prof. André Luis de Medeiros Santos\\
+  Prof. Fabiano Cavalcanti Fernandes\\
+  Departamento de Computação/IFB
+  
+  \vspace{\baselineskip}
+  -----------------------------------------------------------------------\\
+  Prof. Leandro Vaguetti \\
+  Departamento de Computação/IFB
+  
+  \vspace{\baselineskip}
+  -----------------------------------------------------------------------\\
+  Prof. Roberto Duarte Fontes\\
+  Departamento de Computação/IFB
+  
+  \vspace{\baselineskip}
+  -----------------------------------------------------------------------\\
+  Prof. Raimundo Cláudio da Silva Vasconcelos\\
+  Departamento de Computação/IFB
+  
+  \vspace{\baselineskip}
+  -----------------------------------------------------------------------\\
+  Prof. Djamel Fawzi Hadj Sadok\\
   Centro de Informática/UFPE
-  
-  \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
-  Prof. Alexandre Marcos Lins de Vasconselos\\
-  Centro de Informática/UFPE
-  
-  \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
-  Prof. Christina von Flach Garcia Chavez\\
-  Departamento de Ciência da Computação/UFBA
-  
-  \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
-  Prof. Leonardo Gresta Paulino Murta\\
-  Instituto de Computação/UFF
-  
-  \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
-  Prof. Jones Oliveira de Albuquerque\\
-  Departamento de Estatística e Informática/UFRPE
   
   \vfill
   \@address
