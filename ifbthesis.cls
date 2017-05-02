@@ -1,19 +1,16 @@
-%% RiSE Latex Template - version 0.5
+%% IFBthesis Latex Template - version 1
 %%
-%% RiSE's latex template for thesis and dissertations
-%% http://risetemplate.sourceforge.net
+%% IFBthesis's latex template for thesis and dissertations
+%% https://github.com/auyer/IFBtcc
 %%
-%% (c) 2010 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
-%%          Vinicius Cardoso Garcia (vinicius.garcia@gmail.com)
+%% (c) 2017 Rafael de Campos Passos (rcpassos@ieee.org)
+%%          
 %%
-%% This document was initially based on UFPEThesis template, from Paulo Gustavo
-%% S. Fonseca.
+%% This document was initially based on RiSE Latex template, from Yguaratã
+%% Cerqueira Cavalcanti
 %%
 %% ACKNOWLEDGEMENTS
 %%
-%% We would like to thanks the RiSE's reasearchers community and the 
-%% other students from Federal University of Pernambuco who contributed
-%% to the RiSE template development.
 
 \ProvidesClass{ifbthesis}[2017/04/19]
 %\input{aboutufpethesis.txt}
@@ -238,8 +235,8 @@
   \gdef\@listacronymname{Acronyms}
   \gdef\@colophontext{%
   \urlstyle{rm}%
-  This volume has been typeset in \LaTeX with the \textsf{UFPEThesis} class
-  (\url{www.cin.ufpe.br/~paguso/ufpethesis}).
+  This volume has been typeset in \LaTeX with the \textsf{ifbthesis} class
+  (\url{https://github.com/auyer/IFBtcc}).
   \if\@scr1
   For details about this document, click \Acrobatmenu{GeneralInfo}{here}. 
   \fi}
@@ -259,6 +256,10 @@
 \def\universityen#1{%
   \gdef\@universityen{#1}}
 \def\@universityen{Federal Institute of Brasilia}
+
+\def\campus#1{%
+  \gdef\@campus{#1}}
+\def\@campus{\textit{Campus} Taguatinga}
 
 \def\universitylogo{ifblogo.tex}
 
@@ -508,8 +509,20 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \begin{center}
-  \includegraphics[scale=0.65]{cinlogo} \\
+  \includegraphics[scale=0.5]{ifblogo} \\
+  \if\@language0
+    {\fontfamily{times}\selectfont \small \@universitypt\\}
+    {\fontfamily{times}\selectfont \small \@programpt\\}
+    {\fontfamily{times}\selectfont \small \@campus\\}
+  \else
+    {\fontfamily{times}\selectfont \small \@universityen\\}
+    {\fontfamily{times}\selectfont \small \@programen\\}
+    {\fontfamily{times}\selectfont \small \@campus\\}
+  \fi
+  {\fontfamily{times}\selectfont \small http://computacaoifb.net\\}
   \vfill
+  
+  
   \begin{center}
     {\normalsize\bfseries{\MakeUppercase{\@title}}}
     \vskip1\baselineskip
@@ -523,15 +536,9 @@ requirements for the degree of \@degree\ in \@majorfielden.
     \vskip1\baselineskip
     {{\normalsize \bfseries{\@texttype}}}\\
   \end{center}
-  \vspace{0.2cm}
-  \includegraphics[width=3cm]{ifblogo} \\
-  \if\@language0
-    {\fontfamily{times}\selectfont \tiny \@universitypt\\}
-  \else
-    {\fontfamily{times}\selectfont \tiny \@universityen\\}
-  \fi
-  {\fontfamily{times}\selectfont \tiny posgraduacao@cin.ufpe.br\\}
-  {\fontfamily{times}\selectfont \tiny \url{www.cin.ufpe.br/~posgraduacao}\\}
+  \vspace{6.5cm}
+  
+  
   \vskip\baselineskip
   \vskip\baselineskip
   \@address/\@date
