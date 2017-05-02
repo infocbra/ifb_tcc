@@ -1,5 +1,5 @@
-# IFBTcc
-The IFBTcc Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by RiSE researchers and it was initially based on UFPE Thesis class proposed for undergraduate and graduate programs at Center for Informatics — Federal University of Pernambuco. The manual of UFPE Thesis class is still valid for the RiSE template.
+# IFBThesis
+The IFBThesis Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by RiSE researchers and it was initially based on UFPE Thesis class proposed for undergraduate and graduate programs at Center for Informatics — Federal University of Pernambuco. The manual of UFPE Thesis class is still valid for the RiSE template.
 
 The template is also a good start point for developing your own latex class. So, feel free to reuse it anywhere for any purpose.
 
@@ -41,11 +41,11 @@ The following features are provided by the class:
 
 For IFB students
 
-The IFBTcc Latex class has been tested. A lot of contributions from them has been also received. Thus, it satisfies most of the requirements from the department about the thesis format. However, probably some customization will be needed to fully satisfies the cover that is provided by the department when printing the final thesis to the library.
+The IFBThesis Latex class has been tested. A lot of contributions from them has been also received. Thus, it satisfies most of the requirements from the department about the thesis format. However, probably some customization will be needed to fully satisfies the cover that is provided by the department when printing the final thesis to the library.
 
 Customization
 
-The IFBTcc Latex class is easily customizable for the most common document issues through the options that the class provides. For a complete list of options see the examples provided in the distribution package.
+The IFBThesis Latex class is easily customizable for the most common document issues through the options that the class provides. For a complete list of options see the examples provided in the distribution package.
 
 If the options provided by the class are not enough for the customization, we believe that it is very easy to hack the class file.
 
