@@ -1,5 +1,5 @@
-# IFBThesis
-The IFBThesis Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by RiSE researchers and it was initially based on UFPE Thesis class proposed for undergraduate and graduate programs at Center for Informatics — Federal University of Pernambuco. The manual of UFPE Thesis class is still valid for the RiSE template.
+# IFBthesis
+The IFBThesis Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by IFB's Computer Science Researches and it was initially based on RiSE Thesis from UFPE. The manual of IFB Thesis is still valid for the IFBthesis template.
 
 The template is also a good start point for developing your own latex class. So, feel free to reuse it anywhere for any purpose.
 
