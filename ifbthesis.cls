@@ -4,7 +4,7 @@
 %% https://github.com/auyer/IFBtcc
 %%
 %% (c) 2017 Rafael de Campos Passos (rcpassos@ieee.org)
-%%          
+%%
 %%
 %% This document was initially based on RiSE Latex template, from Yguaratã
 %% Cerqueira Cavalcanti
@@ -16,7 +16,7 @@
 %\input{aboutufpethesis.txt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% OPTIONS 
+%% OPTIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \DeclareOption{pt}{%
@@ -32,14 +32,14 @@
 
 \DeclareOption{twoside}{%
   \PassOptionsToClass{twoside}{book}}
- 
+
 \DeclareOption{print}{%
   \let\@scr=0}
 
 \DeclareOption{scr}{%
   \let\@scr=1%
   \PassOptionsToClass{dvipdfm}{book}}
-  
+
 \DeclareOption{bsc}{%
   \let\@degreetype=0}
 
@@ -54,13 +54,13 @@
 
 \DeclareOption{phd}{%
   \let\@degreetype=4}
-  
+
 \DeclareOption{singlespacing}{%
   \let\@linespacing=0}
-  
+
 \DeclareOption{onehalfspacing}{%
   \let\@linespacing=1}
-  
+
 \DeclareOption{doublespacing}{%
   \let\@linespacing=2}
 
@@ -101,6 +101,8 @@
 \RequirePackage{enumitem}
 \RequirePackage{natbib}
 \RequirePackage{lastpage}
+\RequirePackage{listings}
+\RequirePackage{thmtools}
 
 \if\@scr0
   \RequirePackage{graphicx}
@@ -111,11 +113,10 @@
   \RequirePackage[dvips,usenames]{color}
   \RequirePackage[dvipdfm,colorlinks,backref]{hyperref}
 \fi
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% GENERAL PURPOSE MACROS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \let\origcleardoublepage=\cleardoublepage
 \def\cleardoublepage{%
   \newpage{\pagestyle{empty}\origcleardoublepage}
@@ -184,12 +185,14 @@
   \renewcommand{\appendixpagename}{Apêndice}
   \gdef\@listoftablesname{Lista de Tabelas}
   \gdef\@listoffiguresname{Lista de Figuras}
+  %%\gdef\@lstlistoflistingsname{Algorithms}
+  %\renewcommand\lstlistlistingname{Lista de Códigos}
   \gdef\@pagename{página}
   \gdef\@listacronymname{Acrônimos}
   \gdef\@colophontext{%
   \urlstyle{rm}%
-  Este volume foi tipografado em \LaTeX\ na classe \textsf{RiSEThesis}
-  (\url{http://risetemplate.sourceforge.net}).
+  Este volume foi tipografado em \LaTeX\ na classe \textsf{ifbthesis}
+  (\url{http://github.com/auyer/IFBtcc}).
   \if\@scr1
   Para detalhes sobre este documento, clique \Acrobatmenu{GeneralInfo}{aqui}.
   \fi}
@@ -226,7 +229,7 @@
   \gdef\@sectionname{Section}
   \gdef\@tocname{Contents}
   \gdef\@listoftablesname{List of Tables}
-  \gdef\@listoffiguresname{List of Figures}
+  %%\gdef\@lstlistoflistingsname{List of Codes}
   \renewcommand{\appendixtocname}{Appendix}
   \renewcommand{\appendixpagename}{Appendix}
   \newcommand\bibliographytocname{References}
@@ -238,7 +241,7 @@
   This volume has been typeset in \LaTeX with the \textsf{ifbthesis} class
   (\url{https://github.com/auyer/IFBtcc}).
   \if\@scr1
-  For details about this document, click \Acrobatmenu{GeneralInfo}{here}. 
+  For details about this document, click \Acrobatmenu{GeneralInfo}{here}.
   \fi}
 \fi\fi
 
@@ -404,7 +407,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
     \fontsize{18}{100}%          % font size 100pt, baselineskip 100pt
      \selectfont%                  % activate font
    }
-   
+
    \colorlet{chapnumcol}{gray!85}  % color for chapter number
 
    \titleformat{\chapter}[display]
@@ -521,8 +524,8 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \fi
   {\fontfamily{times}\selectfont \small http://computacaoifb.net\\}
   \vfill
-  
-  
+
+
   \begin{center}
     {\normalsize\bfseries{\MakeUppercase{\@title}}}
     \vskip1\baselineskip
@@ -537,8 +540,8 @@ requirements for the degree of \@degree\ in \@majorfielden.
     {{\normalsize \bfseries{\@texttype}}}\\
   \end{center}
   \vspace{6.5cm}
-  
-  
+
+
   \vskip\baselineskip
   \vskip\baselineskip
   \@address/\@date
@@ -593,7 +596,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
     \thispagestyle{empty}
     \singlespacing
     \footnotesize
-}{%   
+}{%
     \onehalfspacing
     \normalsize
 }%
@@ -603,30 +606,30 @@ requirements for the degree of \@degree\ in \@majorfielden.
 	\hrule							% Linha horizontal
 	\begin{center}					% Minipage Centralizado
 	\begin{minipage}[c]{12.5cm}		% Largura
-	
+
 	\@author
-	
+
 	\hspace{0.5cm} \@title  / \@author. --
 	\@address, \@date-
-	
+
 	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
-	
+
 	\hspace{0.5cm} \@advisertitle~\@adviser\\
-	
+
 	\hspace{0.5cm}
 	\parbox[t]{\textwidth}{\@texttype~--~\@universitypt,
 	\@date.}\\
-	
+
 	\hspace{0.5cm}
 		1. Palavra-chave1.
 		2. Palavra-chave2.
 		I. Orientador.
 		II. Universidade xxx.
 		III. Faculdade de xxx.
-		IV. Título\\ 			
-	
+		IV. Título\\
+
 	\hspace{8.75cm} CDU 02:141:005.7\\
-	
+
 	\end{minipage}
 	\end{center}
 	\hrule
@@ -643,40 +646,40 @@ requirements for the degree of \@degree\ in \@majorfielden.
   Trabalho de Graduação apresentada por \textbf{\@author} ao programa de Graduação em
   Ciência da Computação do Instituto Federal de Brasília, sob o título \textbf{\@title}, orientada pelo \textbf{Prof.
   \@adviser} e aprovada pela banca examinadora formada pelos professores:
-  
+
   \vspace{5\baselineskip}
-  
+
   \begin{center}
-  
+
   -----------------------------------------------------------------------\\
   Prof. Fabiano Cavalcanti Fernandes\\
   Departamento de Computação/IFB
-  
+
   \vspace{\baselineskip}
   -----------------------------------------------------------------------\\
   Prof. Leandro Vaguetti \\
   Departamento de Computação/IFB
-  
+
   \vspace{\baselineskip}
   -----------------------------------------------------------------------\\
   Prof. Roberto Duarte Fontes\\
   Departamento de Computação/IFB
-  
+
   \vspace{\baselineskip}
   -----------------------------------------------------------------------\\
   Prof. Raimundo Cláudio da Silva Vasconcelos\\
   Departamento de Computação/IFB
-  
+
   \vspace{\baselineskip}
   -----------------------------------------------------------------------\\
   Prof. Djamel Fawzi Hadj Sadok\\
   Centro de Informática/UFPE
-  
+
   \vfill
   \@address
   \\
   \@date
-  
+
   \end{center}
 }
 
@@ -732,7 +735,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \pagestyle{empty}
   \chapter*{\abstrname}
   \thispagestyle{empty}}
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Keywords
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -793,7 +796,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \end{flushright}
   \normalfont\vskip2\baselineskip}
 
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Table of contents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -810,13 +813,19 @@ requirements for the degree of \@degree\ in \@majorfielden.
    \@starttoc{toc}
 
    \thispagestyle{empty}}
- 
+
 
 \renewcommand\listoffigures{%
    \pagestyle{empty}
    \chapter*{\@listoffiguresname}
    \thispagestyle{empty}
    \@starttoc{lof}}
+
+%\renewcommand\lstlistoflistings{%
+%   \pagestyle{empty}
+%   \chapter*{\@lstlistoflistingsname}
+%   \thispagestyle{empty}
+%   \@starttoc{lof}}
 
 \renewcommand\listoftables{%
    \pagestyle{empty}
@@ -837,24 +846,24 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some codes coming from phdthesis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 % %% make the equation numbers have little ovals around them
  \def\tagform@#1{\maketag@@@{\cornersize{0.8}\ovalbox{\ignorespaces\sffamily{#1}\unskip\@@italiccorr}}}
-% 
+%
 % %% Load up PS insertion package
  \PScommands
- 
+
 % %% now reset the headers and footers
  \fancyhead{}
  \fancyfoot{}
- 
+
 % %% put the page numbers on the top in a nice box
 % %% even side pages
  \fancyhead[LE]{%
  	\rule{0cm}{4mm}\color{black}{\thepage}\hfill\leftmark
  }
- 
-% 
+
+%
 % %% odd side pages
  \fancyhead[RO]{
  	\rule{0cm}{4mm}\color{black}{\rightmark}\hfill\thepage
@@ -867,14 +876,14 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \fancyhead{\hfill\thepage}
   \renewcommand{\headrulewidth}{0pt}
  }
-% 
+%
 % %% bring the style into effect
 
  \pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{% 
-	\markboth{\MakeUppercase{% 
+\renewcommand{\chaptermark}[1]{%
+	\markboth{\MakeUppercase{%
 			\ #1}}{}}
-% 
+%
 % %% make the quotation appear next to the chapter number
 \renewcommand\chapterheadstartvskip{\vspace*{-5\baselineskip}}
 
@@ -883,7 +892,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{secnumdepth}{4}
-% 
+%
 % \def\part{%
 % 	\if@openright\cleardoublepage\else\clearpage\fi
 %   \thispagestyle{empty}%
@@ -944,7 +953,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 	{\slshape}% Body style
 	{0pt}% Heading indent amount
 	{\bfseries}{.}% Heading font and punctuation after it
-	{1ex plus 0pt minus .2ex}% Space after heading 
+	{1ex plus 0pt minus .2ex}% Space after heading
 	{}% Head spec (empty = same as �plain� style
 \theoremstyle{definition}
 \newtheorem{Def}{\@defname}[chapter]
@@ -958,6 +967,44 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %\renewcommand{\qedsymbol}{\rule{3pt}{8pt}}
 %\renrewcommand{\proofname}{\@proofname}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Code BLocks
+%%%%%%%%%%%%%%%%%
+
+
+
+\lstnewenvironment{code}[1][language=Python,caption=Name,label=code:Name]
+  {
+  \if\@language0
+  \renewcommand{\lstlistingname}{Bloco de Código}%
+  \else
+  \renewcommand{\lstlistingname}{Code Block}
+  \fi
+  \lstset{
+    #1,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    escapeinside={\%*}{*)}
+    }
+    }
+  {}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

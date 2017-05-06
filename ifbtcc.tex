@@ -2,12 +2,12 @@
 %% 	RiSE Latex Template - version 0.5
 %%
 %% IFBthesis latex template for thesis and dissertations
-%% https://github.com/auyer/IFBtcc 
+%% https://github.com/auyer/IFBtcc
 %%
 %% (c) 2017 Rafael de Campos Passos (rcpassos@ieee.org)
 %%          Alberth Santana Costa da Silva (1031270@etfbsb.edu.br)
 %%
-%% This document was initially based on RiSE Latex template, from Yguaratã 
+%% This document was initially based on RiSE Latex template, from Yguaratã
 %% Cerqueira Cavalcanti
 %%
 %% GENERAL INSTRUCTIONS
@@ -56,7 +56,7 @@
 %%          \propref -- for proprosition reference
 %%          \pgref   -- for page reference
 %%
-%%          Example: See \chapref{chap:introduction}. It will produce 
+%%          Example: See \chapref{chap:introduction}. It will produce
 %%                   'See Chapter 1', in case of English language.
 %%
 %% Citation commands:
@@ -79,6 +79,12 @@
 \usepackage{caption}
 \usepackage{lipsum}
 \usepackage{sectsty}
+
+\renewcommand*{\lstlistlistingname}{NewListing}
+
+%% Set the language used in your code in the block above
+
+
 
 \captionsetup[table]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
 \captionsetup[lstlisting]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
@@ -149,9 +155,8 @@ necessary support to get here.
 \acknowledgements
 \input{agradecimentos}
 
-\begin{epigraph}[]{Poul Anderson}
-I have yet to see any problem, however complicated, which, when looked at in the
-right way, did not become still more complicated.
+\begin{epigraph}[]{Márcio de Deus}
+When one finds a hard problem, the more complicated it is, the more one ought to work towards enlightening it's solution.
 \end{epigraph}
 
 \resumo
@@ -169,6 +174,10 @@ right way, did not become still more complicated.
 % List of figures
 \listoffigures
 
+% List of Codes
+
+
+\lstlistoflistings
 % List of tables
 \listoftables
 
