@@ -39,6 +39,26 @@ The following features are provided by the class:
   - \propref — for proprosition reference
   - \pgref — for page reference
 
+## For inserting Blocks of code:
+
+  - \begin{code}[language=Code_Language,caption=Name of your Block of Code,label=code:SHORT_NAME]
+    	\\your code in here
+    \end{code}
+
+###Supported languages
+It supports the following programming languages:
+
+ABAP<sup>2,4</sup>, ACSL, Ada<sup>4</sup>, Algol<sup>4</sup>, Ant, Assembler<sup>2,4</sup>, Awk<sup>4</sup>, bash, Basic<sup>2,4</sup>, C#<sup>5</sup>, C++<sup>4</sup>, C<sup>4</sup>, Caml<sup>4</sup>, Clean, Cobol<sup>4</sup>, Comal, csh, Delphi, Eiffel, Elan, erlang, Euphoria, Fortran<sup>4</sup>, GCL, Gnuplot, Haskell, HTML, IDL<sup>4</sup>, inform, Java<sup>4</sup>, JVMIS, ksh, Lisp<sup>4</sup>, Logo, Lua<sup>2</sup>, make<sup>4</sup>, Mathematica<sup>1,4</sup>, Matlab, Mercury, MetaPost, Miranda, Mizar, ML, Modelica<sup>3</sup>, Modula-2, MuPAD, NASTRAN, Oberon-2, Objective C<sup>5</sup> , OCL4, Octave, Oz, Pascal<sup>4</sup>, Perl, PHP, PL/I, Plasm, POV, Prolog, Promela, Python, R, Reduce, Rexx, RSL, Ruby, S<sup>4</sup>, SAS, Scilab, sh, SHELXL, Simula<sup>4</sup>, SQL, tcl<sup>4</sup>, TeX<sup>4</sup>, VBScript, Verilog, VHDL<sup>4</sup>, VRML<sup>4</sup>, XML, XSLT.
+
+For some of them, several dialects are supported. For more information, refer to the documentation that comes with the package, it should be within your distribution under the name listings-*.dvi.
+
+####Notes
+1. It supports Mathematica code only if you are typing in plain text format. You can't include *.NB files \lstinputlisting{...} as you could with any other programming language, but Mathematica can export in a pretty-formatted LaTeX source.
+2. Specification of the dialect is mandatory for these languages (e.g. language={[x86masm]Assembler}).
+3. Modelica is supported via the dtsyntax package available here.
+4. For these languages, multiple dialects are supported. C, for example, has ANSI, Handel, Objective and Sharp. See p. 12 of the listings manual for an overview.
+5. Defined as a dialect of another language
+
 For IFB students
 
 The IFBThesis Latex class has been tested. A lot of contributions from them has been also received. Thus, it satisfies most of the requirements from the department about the thesis format. However, probably some customization will be needed to fully satisfies the cover that is provided by the department when printing the final thesis to the library.
