@@ -41,8 +41,12 @@ The following features are provided by the class:
 
 ## For inserting Blocks of code:
 
-  - \begin{code}[language=Code_Language,caption=Name of your Block of Code,label=code:SHORT_NAME]
-    	\\your code in here
+
+
+    \begin{code}[language=Code_Language,caption=Name of your Block of Code,label=code:SHORT_NAME]
+    
+      \\your code in here
+
     \end{code}
 
 ###Supported languages
