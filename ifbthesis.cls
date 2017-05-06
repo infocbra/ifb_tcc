@@ -229,6 +229,7 @@
   \gdef\@sectionname{Section}
   \gdef\@tocname{Contents}
   \gdef\@listoftablesname{List of Tables}
+  \gdef\@listoffiguresname{List of Figures}
   %%\gdef\@lstlistoflistingsname{List of Codes}
   \renewcommand{\appendixtocname}{Appendix}
   \renewcommand{\appendixpagename}{Appendix}
