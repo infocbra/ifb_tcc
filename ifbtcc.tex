@@ -2,12 +2,11 @@
 %% 	RiSE Latex Template - version 0.5
 %%
 %% IFBthesis latex template for thesis and dissertations
-%% https://github.com/auyer/IFBtcc 
+%% https://github.com/auyer/IFBtcc
 %%
 %% (c) 2017 Rafael de Campos Passos (rcpassos@ieee.org)
-%%          Alberth Santana Costa da Silva (1031270@etfbsb.edu.br)
 %%
-%% This document was initially based on RiSE Latex template, from Yguaratã 
+%% This document was initially based on RiSE Latex template, from Yguaratã
 %% Cerqueira Cavalcanti
 %%
 %% GENERAL INSTRUCTIONS
@@ -56,7 +55,7 @@
 %%          \propref -- for proprosition reference
 %%          \pgref   -- for page reference
 %%
-%%          Example: See \chapref{chap:introduction}. It will produce 
+%%          Example: See \chapref{chap:introduction}. It will produce
 %%                   'See Chapter 1', in case of English language.
 %%
 %% Citation commands:
@@ -79,6 +78,8 @@
 \usepackage{caption}
 \usepackage{lipsum}
 \usepackage{sectsty}
+
+%% Set the language used in your code in the block above
 
 \captionsetup[table]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
 \captionsetup[lstlisting]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
@@ -119,13 +120,13 @@
 
 \date{2017}
 
-\author{Rafael de Campos Passos}
-\adviser{Fabiano Cavalcanti Fernandes}
-\coadviser{Cerqueira Cavalcanti}
+\author{Nome completo do Autor}
+\adviser{Nome completo do Orientador}
+\coadviser{Nome dompleto do co-orientador }
 
 % Macros (defines your own macros here, if needed)
 \def\x{\checkmark}
-
+%\let\lstlistoflistings\origlstoflistings
 \begin{document}
 
 \frontmatter
@@ -147,27 +148,29 @@ necessary support to get here.
 \end{dedicatory}
 
 \acknowledgements
-\input{agradecimentos}
+\input{text/agradecimentos}
 
-\begin{epigraph}[]{Poul Anderson}
-I have yet to see any problem, however complicated, which, when looked at in the
-right way, did not become still more complicated.
+\begin{epigraph}[]{Márcio de Deus}
+When one finds a hard problem, the more complicated it is, the more one ought to work towards enlightening it's solution.
 \end{epigraph}
 
 \resumo
 % Escreva seu resumo no arquivo resumo.tex
 {\parindent0pt
-	\input{resumo}
+	\input{text/resumo}
 }
 
 \abstract
 % Write your abstract in a file called abstract.tex
 {\parindent0pt
-	\input{abstract}
+	\input{text/abstract}
 }
 
 % List of figures
 \listoffigures
+
+% List of Codes
+\lstlistoflistings
 
 % List of tables
 \listoftables
@@ -175,22 +178,22 @@ right way, did not become still more complicated.
 % List of acronyms
 % Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
 \listofacronyms
-\input{acronyms}
+\input{text/acronyms}
 
 % Summary (tables of contents)
 \tableofcontents
 
 \mainmatter
 
-\include{chapters/introduction}
-\include{chapters/background}
-\include{chapters/desenv}
-\include{chapters/conclusion}
+\include{text/introduction}
+\include{text/background}
+\include{text/desenv}
+\include{text/conclusion}
 
 % References
 
 \begin{references}
-  \bibliography{references}
+  \bibliography{bib/references}
 \end{references}
 
 % Appendix
