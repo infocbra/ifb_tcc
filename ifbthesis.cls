@@ -9,13 +9,11 @@
 %% This document was initially based on RiSE Latex template, from Yguaratã
 %% Cerqueira Cavalcanti
 %%
-%% ACKNOWLEDGEMENTS
 %%
 
 \ProvidesClass{ifbthesis}[2017/04/19]
 
 %% OPTIONS
-
 
 \DeclareOption{pt}{%
   \let\@language=0%
@@ -126,21 +124,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% LABELS
-
-%% Language Independent
-% \gdef\@bachelordissertation{Trabalho de Graduação}
-% \gdef\@mastersdissertation{Dissertação de Mestrado}
-% \gdef\@phdqualifying{Monografia de Qualificação}
-% \gdef\@phdproposal{Proposta de Tese de Doutorado}
-% \gdef\@phdthesis{Tese de Doutorado}
-% \gdef\@bachelordegree{Bacharel}
-% \gdef\@mastersdegree{Mestre}
-% \gdef\@phddegree{Doutor}
 \gdef\resumoname{Resumo} \gdef\abstrname{Abstract}
 \gdef\acronimoname{Lista de Acrônimos} \gdef\acronymname{List of Acronyms}
 \gdef\keywordsnamePT{Palavras-chave}
 \gdef\keywordsnameEN{Keywords}
-
 
 %% Language Dependent
 
@@ -231,9 +218,7 @@
   \renewcommand{\appendixtocname}{Appendix}
   \renewcommand{\appendixpagename}{Appendix}
   \newcommand\bibliographytocname{References}
-%   \renewcommand{\lstlistoflistingstocname}{Algorithms}
-%   \renewcommand{\lstlistoflistingspagename}{Algorithms}
-
+  
   \renewcommand{\bibname}{\bibliographytocname}
   \gdef\@pagename{page}
   \gdef\@listacronymname{Acronyms}
@@ -378,8 +363,6 @@ da \@universitypt\ como requisito parcial para obtenção do
 grau de \@degree\ em \@majorfieldpt.
 \fi
 \if\@language1 %If language is English
-% \vskip\baselineskip
-% \vskip\baselineskip
 A \@texttype{} presented to the \if\@showdepartment1\@departmenten\
 \else\@instituteen\ \fi of \@universityen\ in partial fulfillment of the
 requirements for the degree of \@degree\ in \@majorfielden.
@@ -489,13 +472,9 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %% Captions (Tables, Figures, etc.)
 
-% \captionsetup{justification=centering}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%         STANDARD STYLE           %%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Fonts
 
 \newcommand\quotefont{\normalfont\normalsize}
@@ -856,7 +835,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
  	\rule{0cm}{4mm}\color{black}{\thepage}\hfill\leftmark
  }
 
-%
 % %% odd side pages
  \fancyhead[RO]{
  	\rule{0cm}{4mm}\color{black}{\rightmark}\hfill\thepage
@@ -869,14 +847,13 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \fancyhead{\hfill\thepage}
   \renewcommand{\headrulewidth}{0pt}
  }
-%
+
 % %% bring the style into effect
 
  \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{%
 	\markboth{\MakeUppercase{%
 			\ #1}}{}}
-%
 % %% make the quotation appear next to the chapter number
 \renewcommand\chapterheadstartvskip{\vspace*{-5\baselineskip}}
 
@@ -885,37 +862,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{secnumdepth}{4}
-%
-% \def\part{%
-% 	\if@openright\cleardoublepage\else\clearpage\fi
-%   \thispagestyle{empty}%
-%   \secdef\@part\@spart}
-% \def\@part[#1]#2{%
-%     \ifnum \c@secnumdepth >-2\relax
-%       \refstepcounter{part}%
-%       \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
-%     \else
-%       \addcontentsline{toc}{part}{#1}%
-%     \fi
-%     \markboth{}{}%
-%     {\centering
-%      \interlinepenalty \@M
-%      \normalfont
-%      \null\vfil
-%      \ifnum \c@secnumdepth >-2\relax
-%        {\sc\Large\partname\nobreakspace\thepart}
-%        \par
-%        \vskip 20\p@
-%      \fi
-%      {\huge\bfseries #2\par}}
-%      \vfil}
-% \def\@spart#1{%
-%     {\centering
-%      \interlinepenalty \@M
-%      \normalfont
-%      \null\vfil
-%      {\huge\bfseries #1\par}}
-%      \vfil}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Tables and figures
@@ -955,8 +901,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 \newtheorem{Theo}{\@theoname}[chapter]
 \newtheorem{Prop}{\@propname}[chapter]
 \newtheorem{Cor}{\@corname}[chapter]
-%\renewcommand{\qedsymbol}{\rule{3pt}{8pt}}
-%\renrewcommand{\proofname}{\@proofname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Code BLocks
