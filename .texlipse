@@ -1,5 +1,5 @@
 #TeXlipse project settings
-#Wed Apr 23 22:26:43 BRT 2014
+#Fri June 09 10:49:43 BRT 2017
 markTmpDer=true
 builderNum=2
 outputDir=
@@ -7,8 +7,8 @@ makeIndSty=
 bibrefDir=
 outputFormat=pdf
 tempDir=tmp
-mainTexFile=risethesis.tex
-outputFile=risethesis.pdf
+mainTexFile=ifbtcc.tex
+outputFile=ifbtcc.pdf
 langSpell=en
 markDer=true
 srcDir=
