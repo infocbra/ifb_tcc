@@ -13,11 +13,9 @@
 %%
 
 \ProvidesClass{ifbthesis}[2017/04/19]
-%\input{aboutufpethesis.txt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% OPTIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \DeclareOption{pt}{%
   \let\@language=0%
@@ -73,7 +71,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PACKAGES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \RequirePackage{amsmath,amsfonts,amssymb,amsthm}
 \RequirePackage{calc}
 \RequirePackage{ifthen}
@@ -102,7 +100,8 @@
 \RequirePackage{natbib}
 \RequirePackage{lastpage}
 \RequirePackage{listings}
-\RequirePackage{thmtools}
+
+
 
 \if\@scr0
   \RequirePackage{graphicx}
@@ -115,7 +114,6 @@
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% GENERAL PURPOSE MACROS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \let\origcleardoublepage=\cleardoublepage
 \def\cleardoublepage{%
@@ -128,7 +126,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% LABELS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Language Independent
 % \gdef\@bachelordissertation{Trabalho de Graduação}
@@ -143,6 +140,7 @@
 \gdef\acronimoname{Lista de Acrônimos} \gdef\acronymname{List of Acronyms}
 \gdef\keywordsnamePT{Palavras-chave}
 \gdef\keywordsnameEN{Keywords}
+
 
 %% Language Dependent
 
@@ -183,10 +181,9 @@
   \renewcommand{\bibname}{\bibliographytocname}
   \renewcommand{\appendixtocname}{Apêndice}
   \renewcommand{\appendixpagename}{Apêndice}
+  \gdef\@lstlistingname{Lista deAlgoritmos}
   \gdef\@listoftablesname{Lista de Tabelas}
   \gdef\@listoffiguresname{Lista de Figuras}
-  %%\gdef\@lstlistoflistingsname{Algorithms}
-  %\renewcommand\lstlistlistingname{Lista de Códigos}
   \gdef\@pagename{página}
   \gdef\@listacronymname{Acrônimos}
   \gdef\@colophontext{%
@@ -230,10 +227,13 @@
   \gdef\@tocname{Contents}
   \gdef\@listoftablesname{List of Tables}
   \gdef\@listoffiguresname{List of Figures}
-  %%\gdef\@lstlistoflistingsname{List of Codes}
+  \gdef\@lstlistingname{List of Algorithms}
   \renewcommand{\appendixtocname}{Appendix}
   \renewcommand{\appendixpagename}{Appendix}
   \newcommand\bibliographytocname{References}
+%   \renewcommand{\lstlistoflistingstocname}{Algorithms}
+%   \renewcommand{\lstlistoflistingspagename}{Algorithms}
+
   \renewcommand{\bibname}{\bibliographytocname}
   \gdef\@pagename{page}
   \gdef\@listacronymname{Acronyms}
@@ -249,7 +249,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% IDENTIFICATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% School identification
 
@@ -265,7 +264,7 @@
   \gdef\@campus{#1}}
 \def\@campus{\textit{Campus} Taguatinga}
 
-\def\universitylogo{ifblogo.tex}
+\def\universitylogo{images/ifblogo.tex}
 
 \let\@showinstitute=0
 \def\institutept#1{%
@@ -389,7 +388,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Chapter formats
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand{\formatFrontmatterChapter}{
    \titlespacing*{\chapter}{0pt}{-34pt}{40pt}
    \titleformat{\chapter}[display]{
@@ -441,7 +440,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PAGE LAYOUT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %% Line spacing
 \if\@linespacing0
@@ -476,7 +475,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 \newenvironment{references}
 {
 	\backmatter
-	\bibliographystyle{abnt}
+	\bibliographystyle{ifblibs/abnt}
 	\setlength{\bibhang}{0pt}
 	\singlespacing % Change to singlespacing for the references
 	\begingroup
@@ -494,12 +493,10 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%         STANDARD STYLE           %%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Fonts
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand\quotefont{\normalfont\normalsize}
 \newcommand\quotefonti{\it\normalsize}
@@ -507,13 +504,12 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Frontpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\frontpage{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \begin{center}
-  \includegraphics[scale=0.5]{ifblogo} \\
+  \includegraphics[scale=0.5]{images/ifblogo} \\
   \if\@language0
     {\fontfamily{times}\selectfont \small \@universitypt\\}
     {\fontfamily{times}\selectfont \small \@programpt\\}
@@ -552,7 +548,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Presentation page
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\presentationpage{%
   \if@openright\cleardoublepage\else\clearpage\fi
@@ -638,7 +633,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Banca
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\banca{%
   \if@openright\cleardoublepage\else\clearpage\fi
@@ -686,7 +680,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Dedicatory
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \def\dedicatory{%
   \if@openright\cleardoublepage\else\clearpage\fi
@@ -706,7 +700,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Acknowledgements
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\acknowledgements{%
   \pagestyle{empty}
@@ -716,7 +709,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Resumo
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \def\resumo{%
   %\onehalfspacing
@@ -728,7 +721,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Abstract
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \def\abstract{%
   %\onehalfspacing
@@ -739,7 +732,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Keywords
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \def\@keywordsname{\@defaultkeywordsname}
 \def\keywords{%
@@ -749,7 +742,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Quotations
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newenvironment{citationblock}%
   {%
@@ -800,7 +792,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Table of contents
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \setcounter{tocdepth}{4}
 
 \renewcommand\tableofcontents{%
@@ -822,11 +814,12 @@ requirements for the degree of \@degree\ in \@majorfielden.
    \thispagestyle{empty}
    \@starttoc{lof}}
 
-%\renewcommand\lstlistoflistings{%
-%   \pagestyle{empty}
-%   \chapter*{\@lstlistoflistingsname}
-%   \thispagestyle{empty}
-%   \@starttoc{lof}}
+\renewcommand\lstlistoflistings{%
+  \pagestyle{empty}
+  \chapter*{\@lstlistingname}
+  \thispagestyle{empty}
+  \@starttoc{lol}}
+
 
 \renewcommand\listoftables{%
    \pagestyle{empty}
@@ -846,8 +839,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some codes coming from phdthesis
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+
 % %% make the equation numbers have little ovals around them
  \def\tagform@#1{\maketag@@@{\cornersize{0.8}\ovalbox{\ignorespaces\sffamily{#1}\unskip\@@italiccorr}}}
 %
@@ -927,7 +919,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Tables and figures
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
@@ -943,7 +934,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Mathematics
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Equation numbering
 \renewcommand{\theequation}{\rm\thechapter.\arabic{equation}}
@@ -970,17 +960,9 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Code BLocks
-%%%%%%%%%%%%%%%%%
-
-
 
 \lstnewenvironment{code}[1][language=Python,caption=Name,label=code:Name]
   {
-  \if\@language0
-  \renewcommand{\lstlistingname}{Bloco de Código}%
-  \else
-  \renewcommand{\lstlistingname}{Code Block}
-  \fi
   \lstset{
     #1,
     basicstyle=\ttfamily\small,
@@ -1004,11 +986,11 @@ requirements for the degree of \@degree\ in \@majorfielden.
     numbersep=10pt,
     escapeinside={\%*}{*)}
     }
-    }
-  {}
+  }
+ {}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference macros
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\figref}[2][]{\@figurename~\ref{#2}#1\xspace}
 \newcommand{\tabref}[1]{\@tablename~\ref{#1}\xspace}
