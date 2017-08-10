@@ -80,5 +80,6 @@ We would like to thanks the RiSE's researchers community, the students from Fede
 
 # Live Preview:
   The live preview is available in the ShareLatex website. 
-    IFBtcc (Full Version): https://www.sharelatex.com/project/593aaa63e3e9ad1845022ff2
-    Assignment (Simplified Version): https://www.sharelatex.com/project/598c5866fbb49923a45cd6a3
+  
+  - IFBtcc (Full Version): https://www.sharelatex.com/project/593aaa63e3e9ad1845022ff2
+  - Assignment (Simplified Version): https://www.sharelatex.com/project/598c5866fbb49923a45cd6a3
