@@ -76,3 +76,9 @@ If the options provided by the class are not enough for the customization, we be
 ACKNOWLEDGEMENTS
 
 We would like to thanks the RiSE's researchers community, the students from Federal University of Pernambuco, and other users that have been contributed to the project this one has been forked from.
+
+
+# Live Preview:
+  The live preview is available in the ShareLatex website. 
+    IFBtcc (Full Version): https://www.sharelatex.com/project/593aaa63e3e9ad1845022ff2
+    Assignment (Simplified Version): https://www.sharelatex.com/project/598c5866fbb49923a45cd6a3
