@@ -498,7 +498,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
     {\fontfamily{times}\selectfont \small \@programen\\}
     {\fontfamily{times}\selectfont \small \@campus\\}
   \fi
-  {\fontfamily{times}\selectfont \small http://computacaoifb.net\\}
+  %% {\fontfamily{times}\selectfont \small http://departmentURL\\}
   \vfill
 
 
