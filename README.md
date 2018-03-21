@@ -1,4 +1,12 @@
-# IFBThesis & IFBtcc
+# IFB TCC model
+
+## Live Preview:
+  The live preview is available in the ShareLatex website. 
+  
+  - IFBtcc : https://www.sharelatex.com/project/593aaa63e3e9ad1845022ff2
+
+## The Project
+
 The IFBThesis Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by IFB's Computer Science Researches and it was initially based on RiSE Thesis from UFPE. The manual of IFB Thesis is still valid for the IFBthesis template.
 
 The template is also a good start point for developing your own latex class. So, feel free to reuse it anywhere for any purpose.
@@ -76,10 +84,3 @@ If the options provided by the class are not enough for the customization, we be
 ACKNOWLEDGEMENTS
 
 We would like to thanks the RiSE's researchers community, the students from Federal University of Pernambuco, and other users that have been contributed to the project this one has been forked from.
-
-
-# Live Preview:
-  The live preview is available in the ShareLatex website. 
-  
-  - IFBtcc (Full Version): https://www.sharelatex.com/project/593aaa63e3e9ad1845022ff2
-  - Assignment (Simplified Version): https://www.sharelatex.com/project/598c5866fbb49923a45cd6a3
