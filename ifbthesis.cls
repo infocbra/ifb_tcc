@@ -1,9 +1,9 @@
-%% IFBthesis Latex Template - version 1
+%% IFBthesis Latex Template - version 1.1
 %%
 %% IFBthesis's latex template for thesis and dissertations
-%% https://github.com/auyer/IFBtcc
+%% https://github.com/IFBmodels/tcc
 %%
-%% (c) 2017 Rafael de Campos Passos (rcpassos@ieee.org)
+%% (c) 2017 Rafael de Campos Passos (rafae@rcpassos.me)
 %%
 %%
 %% This document was initially based on RiSE Latex template, from Yguaratã
@@ -11,7 +11,7 @@
 %%
 %%
 
-\ProvidesClass{ifbthesis}[2017/04/19]
+\ProvidesClass{ifbthesis}[2018/04/11]
 
 %% OPTIONS
 
@@ -50,6 +50,12 @@
 
 \DeclareOption{phd}{%
   \let\@degreetype=4}
+ 
+\DeclareOption{acd}{%
+  \let\@degreetype=5}
+ 
+\DeclareOption{pcc}{%
+  \let\@degreetype=6}
 
 \DeclareOption{singlespacing}{%
   \let\@linespacing=0}
@@ -139,6 +145,8 @@
   \gdef\@phdqualifying{Monografia de Qualificação}
   \gdef\@phdproposal{Proposta de Tese de Doutorado}
   \gdef\@phdthesis{Tese de Doutorado}
+  \gdef\@acdassignment{Trabalho Acadêmico}
+  \gdef\@pccthesis{Pré Projeto}
   \gdef\@bachelordegree{Bacharel}
   \gdef\@mastersdegree{Mestre}
   \gdef\@phddegree{Doutor}
@@ -188,6 +196,8 @@
   \gdef\@phdqualifying{Ph.D. Thesis Qualification}
   \gdef\@phdproposal{Ph.D. Proposal}
   \gdef\@phdthesis{Ph.D. Thesis}
+  \gdef\@acdassignment{Acadêmic Assignmnet}
+  \gdef\@pccthesis{Pre-Proposal}
   \gdef\@bachelordegree{Bachelor}
   \gdef\@mastersdegree{Master of Science}
   \gdef\@phddegree{Philosophy Doctor}
@@ -283,9 +293,13 @@
   \gdef\@majorfielden{#1}}
 \def\@majorfielden{\@notdefined}
 
+\def\module#1{%
+  \let\@showdepartment=1
+  \gdef\@module{#1}}
+
 \def\address#1{%
   \gdef\@address{#1}}
-\def\@address{Recife}
+\def\@address{Brasília}
 
 %% Authors identification
 
@@ -339,7 +353,11 @@
     \@phdproposal
   \else\if\@degreetype4
     \@phdthesis
-  \fi\fi\fi\fi\fi}
+  \else\if\@degreetype5
+    \@acdassignment
+  \else\if\@degreetype6
+    \@pccthesis
+  \fi\fi\fi\fi\fi\fi\fi}
 
 \def\@degree{%
   \if\@degreetype0
@@ -498,7 +516,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
     {\fontfamily{times}\selectfont \small \@programen\\}
     {\fontfamily{times}\selectfont \small \@campus\\}
   \fi
-  %% {\fontfamily{times}\selectfont \small http://departmentURL\\}
   \vfill
 
 
@@ -514,6 +531,9 @@ requirements for the degree of \@degree\ in \@majorfielden.
     \normalsize \textit{\bfseries{\MakeUppercase{\@author}}}
     \vskip1\baselineskip
     {{\normalsize \bfseries{\@texttype}}}\\
+    \if\@degreetype5
+        {{\normalsize \bfseries{\@module}}}\\
+    \fi
   \end{center}
   \vspace{6.5cm}
 
@@ -557,7 +577,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   		\@date
   \end{center}
   \end{center}
-  \setcounter{page}{1}
+  \setcounter{page}{0}
 }
 
 
