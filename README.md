@@ -1,9 +1,9 @@
 # IFB TCC model
 
 ## Live Preview:
-  The live preview is available in the ShareLatex website. 
+  The live preview is available in the ShareLatex website (Might be a few minor version behind)
   
-  - IFBtcc : https://www.sharelatex.com/project/593aaa63e3e9ad1845022ff2
+  - IFBtcc : https://www.sharelatex.com/templates/5ab7b4a46004ddcd341b36ce
 
 ## The Project
 
@@ -13,6 +13,8 @@ The template is also a good start point for developing your own latex class. So,
 
 The following features are provided by the class:
 
+- Writing Academic Assignments (style option: acd)
+- Writing Pre-Proposal documents (style option: pcc)
 - Writing B.Sc. documents (style option: bsc)
 - Writing M.Sc. documents (style option: msc)
 - Writing Ph.D. documents
