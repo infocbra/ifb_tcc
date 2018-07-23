@@ -1,0 +1,3 @@
+[submodule "ifbclass"]
+	path = ifbclass
+	url = https://github.com/IFBmodels/ifbclass

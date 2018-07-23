@@ -1,8 +1,8 @@
-%% IFBThesis Latex Template Version 1.0, a fork of :
-%% 	RiSE Latex Template - version 0.5
+%% IFBTcc Latex Template Version
+%% 	based on a fork of : RiSE Latex Template
 %%
 %% IFBthesis latex template for thesis and dissertations
-%% https://github.com/auyer/IFBtcc
+%% https://github.com/IFBmodels/tcc
 %%
 %% (c) 2017 Rafael de Campos Passos (rcpassos@ieee.org)
 %%
@@ -63,142 +63,143 @@
 %%          \citep (from natbib) -- To cite a reference between parenthesis
 %%          citationblock environment -- To produce direct citation blocks according to the ABNT
 
-\documentclass[pt,twoside,onehalfspacing,bsc]{ifbthesis}
+\documentclass[pt,twoside,onehalfspacing,bsc]{ifbclass/ifbclass}
 
-\usepackage{colortbl}
-\usepackage{color}
-\usepackage[table]{xcolor}
-\usepackage{microtype}
-\usepackage{bibentry}
-\usepackage{subfigure}
-\usepackage{multirow}
-\usepackage{rotating}
-\usepackage{booktabs}
-\usepackage{pdfpages}
-\usepackage{caption}
-\usepackage{lipsum}
-\usepackage{sectsty}
-
-%% Set the language used in your code in the block above
-
-\captionsetup[table]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
-\captionsetup[lstlisting]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
-\captionsetup[figure]{position=bottom,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
-
-%% Chapter and (Sub)Section fonts must be same size as text (12)
-\sectionfont{\fontsize{12}{15}\selectfont}
-\subsectionfont{\fontsize{12}{15}\selectfont}
-\subsubsectionfont{\fontsize{12}{15}\selectfont}
-
-%% Change the following pdf author attribute name to your name.
-\usepackage[linkcolor=black,
-            citecolor=black,
-            urlcolor=black,
-            colorlinks,
-            pdfpagelabels,
-            pdftitle={Rise Thesis Template (ABNT)},
-            pdfauthor={Rise Thesis Template (ABNT)},
-            breaklinks=true]{hyperref}
-
-\address{BRASÍLIA}
-
-\universitypt{Instituto Federal de Brasília}
-\universityen{Federal Institute of Brasilia}
-
-\campus{Campus Taguatinga}
-
-\departmentpt{Departamento de Computação}
-\departmenten{Computer Department}
-
-\programpt{Bacharelado em Ciência da Computação}
-\programen{Bachelors in Computer Science}
-
-\majorfieldpt{Ciência da Computação}
-\majorfielden{Computer Science}
-
-\title{Título do Trabalho }
-
-\date{2017}
-
-\author{Nome completo do Autor}
-\adviser{Nome completo do Orientador}
-\coadviser{Nome dompleto do co-orientador }
-
-% Macros (defines your own macros here, if needed)
-\def\x{\checkmark}
-%\let\lstlistoflistings\origlstoflistings
-\begin{document}
-
-\frontmatter
-
-\frontpage
-
-\presentationpage
-
-\begin{fichacatalografica}
-	\FakeFichaCatalografica % Comment this line when you have the correct file
-%     \includepdf{fig_ficha_catalografica.pdf} % Uncomment this
-\end{fichacatalografica}
-
-\banca
-
-\begin{dedicatory}
-I dedicate this thesis to all my family, friends and professors who gave me the
-necessary support to get here.
-\end{dedicatory}
-
-\acknowledgements
-\input{text/agradecimentos}
-
-\begin{epigraph}[]{Márcio de Deus}
-When one finds a hard problem, the more complicated it is, the more one ought to work towards enlightening it's solution.
-\end{epigraph}
-
-\resumo
-% Escreva seu resumo no arquivo resumo.tex
-{\parindent0pt
-	\input{text/resumo}
-}
-
-\abstract
-% Write your abstract in a file called abstract.tex
-{\parindent0pt
-	\input{text/abstract}
-}
-
-% List of figures
-\listoffigures
-
-% List of Codes
-\lstlistoflistings
-
-% List of tables
-\listoftables
-
-% List of acronyms
-% Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
-\listofacronyms
-\input{text/acronyms}
-
-% Summary (tables of contents)
-\tableofcontents
-
-\mainmatter
-
-\include{text/introduction}
-\include{text/background}
-\include{text/desenv}
-\include{text/conclusion}
-
-% References
-
-\begin{references}
-  \bibliography{bib/references}
-\end{references}
-
-% Appendix
-
-\theappendix
-\include{appendix/mapping-study}
-
-\end{document}
+  \usepackage{colortbl}
+  \usepackage{color}
+  \usepackage[table]{xcolor}
+  \usepackage{microtype}
+  \usepackage{bibentry}
+  \usepackage{subfigure}
+  \usepackage{multirow}
+  \usepackage{rotating}
+  \usepackage{booktabs}
+  \usepackage{pdfpages}
+  \usepackage{caption}
+  \usepackage{lipsum}
+  \usepackage{sectsty}
+  
+  %% Set the language used in your code in the block above
+  
+  \captionsetup[table]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+  \captionsetup[lstlisting]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+  \captionsetup[figure]{position=bottom,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+  
+  %% Chapter and (Sub)Section fonts must be same size as text (12)
+  \sectionfont{\fontsize{12}{15}\selectfont}
+  \subsectionfont{\fontsize{12}{15}\selectfont}
+  \subsubsectionfont{\fontsize{12}{15}\selectfont}
+  
+  %% Change the following pdf author attribute name to your name.
+  \usepackage[linkcolor=black,
+              citecolor=black,
+              urlcolor=black,
+              colorlinks,
+              pdfpagelabels,
+              pdftitle={Rise Thesis Template (ABNT)},
+              pdfauthor={Rise Thesis Template (ABNT)},
+              breaklinks=true]{hyperref}
+  
+  \address{BRASÍLIA}
+  
+  \universitypt{Instituto Federal de Brasília}
+  \universityen{Federal Institute of Brasilia}
+  
+  \campus{Campus Taguatinga}
+  
+  \departmentpt{Departamento de Computação}
+  \departmenten{Computer Department}
+  
+  \programpt{Bacharelado em Ciência da Computação}
+  \programen{Bachelors in Computer Science}
+  
+  \majorfieldpt{Ciência da Computação}
+  \majorfielden{Computer Science}
+  
+  \title{Título do Trabalho }
+  
+  \date{2017}
+  
+  \author{Nome completo do Autor}
+  \adviser{Nome completo do Orientador}
+  \coadviser{Nome dompleto do co-orientador }
+  
+  % Macros (defines your own macros here, if needed)
+  \def\x{\checkmark}
+  %\let\lstlistoflistings\origlstoflistings
+  \begin{document}
+  
+  \frontmatter
+  
+  \frontpage
+  
+  \presentationpage
+  
+  \begin{fichacatalografica}
+    \FakeFichaCatalografica % Comment this line when you have the correct file
+  %     \includepdf{fig_ficha_catalografica.pdf} % Uncomment this
+  \end{fichacatalografica}
+  
+  \banca
+  
+  \begin{dedicatory}
+  I dedicate this thesis to all my family, friends and professors who gave me the
+  necessary support to get here.
+  \end{dedicatory}
+  
+  \acknowledgements
+  \input{text/agradecimentos}
+  
+  \begin{epigraph}[]{Márcio de Deus}
+  When one finds a hard problem, the more complicated it is, the more one ought to work towards enlightening it's solution.
+  \end{epigraph}
+  
+  \resumo
+  % Escreva seu resumo no arquivo resumo.tex
+  {\parindent0pt
+    \input{text/resumo}
+  }
+  
+  \abstract
+  % Write your abstract in a file called abstract.tex
+  {\parindent0pt
+    \input{text/abstract}
+  }
+  
+  % List of figures
+  \listoffigures
+  
+  % List of Codes
+  \lstlistoflistings
+  
+  % List of tables
+  \listoftables
+  
+  % List of acronyms
+  % Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
+  \listofacronyms
+  \input{text/acronyms}
+  
+  % Summary (tables of contents)
+  \tableofcontents
+  
+  \mainmatter
+  
+  \include{text/introduction}
+  \include{text/background}
+  \include{text/desenv}
+  \include{text/conclusion}
+  
+  % References
+  
+  \begin{references}
+    \bibliography{bib/references}
+  \end{references}
+  
+  % Appendix
+  
+  \theappendix
+  \include{appendix/mapping-study}
+  
+  \end{document}
+  
