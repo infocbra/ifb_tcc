@@ -5,6 +5,13 @@
   
   - IFBtcc : https://www.sharelatex.com/templates/5ab7b4a46004ddcd341b36ce
 
+## How to propperly Download:
+
+You can download the latest release from the [Download Page](https://github.com/IFBmodels/tcc/releases/latest), or clone this repository recursively:
+
+    git clone  --recursive https://github.com/IFBmodels/tcc
+
+
 ## The Project
 
 The IFB Tcc Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by IFB's Computer Science Researches and it was initially based on RiSE Thesis from UFPE. The manual of IFB Thesis is still valid for the IFB Tcc template.
@@ -73,16 +80,16 @@ For some of them, several dialects are supported. For more information, refer to
 4. For these languages, multiple dialects are supported. C, for example, has ANSI, Handel, Objective and Sharp. See p. 12 of the listings manual for an overview.
 5. Defined as a dialect of another language
 
-For IFB students
+### For IFB students
 
 The ifbclass Latex class has been tested. A lot of contributions from them has been also received. Thus, it satisfies most of the requirements from the department about the thesis format. However, probably some customization will be needed to fully satisfies the cover that is provided by the department when printing the final thesis to the library.
 
-Customization
+### Customization
 
 The ifbclass Latex class is easily customizable for the most common document issues through the options that the class provides. For a complete list of options see the examples provided in the distribution package.
 
 If the options provided by the class are not enough for the customization, we believe that it is very easy to hack the class file.
 
-ACKNOWLEDGEMENTS
+### ACKNOWLEDGEMENTS
 
 We would like to thanks the RiSE's researchers community, the students from Federal University of Pernambuco, and other users that have contributed to the project this one has been forked from.
