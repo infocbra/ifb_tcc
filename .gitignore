@@ -9,5 +9,16 @@
 /risethesis.lot
 /risethesis.out
 /risethesis.toc
-
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.log
+*.lol
+*.toc
+*.lot
+*.lof
+*.gz
+*.out
+*.fls
 .DS_Store
