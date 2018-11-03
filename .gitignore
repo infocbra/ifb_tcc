@@ -1,14 +1,7 @@
-/risethesis.pdf
-/risethesis.synctex.gz
-/risethesis.bbl
-/risethesis.blg
+*.synctex.gz
+*.synctex*
 /tmp
-/risethesis.aux
-/risethesis.lof
-/risethesis.log
-/risethesis.lot
-/risethesis.out
-/risethesis.toc
+*.out
 *.aux
 *.bbl
 *.blg
