@@ -663,12 +663,12 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \includegraphics[scale=0.5]{ifbclass/images/ifblogo} \\
   \if\@language0
     {\fontfamily{times}\selectfont \small \@universitypt\\}
-    {\fontfamily{times}\selectfont \small \@programpt\\}
     {\fontfamily{times}\selectfont \small \@campus\\}
+    {\fontfamily{times}\selectfont \small \@programpt\\}
   \else
     {\fontfamily{times}\selectfont \small \@universityen\\}
-    {\fontfamily{times}\selectfont \small \@programen\\}
     {\fontfamily{times}\selectfont \small \@campus\\}
+    {\fontfamily{times}\selectfont \small \@programen\\}
   \fi
   \vfill
 
