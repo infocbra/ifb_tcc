@@ -10,6 +10,78 @@
 %% Cerqueira Cavalcanti
 %%
 %%
+%% This class was adapted to use with IFBTCC by
+%% (c) 2018 Daniel Sundfeld (daniel.sundfeld@ifb.edu.br)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% IFBTCC documentation
+%% IFBTcc Latex Template Version
+%% 	based on a fork of : RiSE Latex Template
+%%
+%% IFBthesis latex template for thesis and dissertations
+%% https://github.com/IFBmodels/tcc
+%%
+%% (c) 2017 Rafael de Campos Passos (rcpassos@ieee.org)
+%%
+%% This document was initially based on RiSE Latex template, from Yguaratã
+%% Cerqueira Cavalcanti
+%%
+%% GENERAL INSTRUCTIONS
+%%
+%% We strongly recommend you to compile your documents using pdflatex command.
+%% It is also recommend use the texlipse plugin for Eclipse to edit your documents.
+%%
+%% Options for \documentclass command:
+%%         * Idiom
+%%           pt   - Portguese (default)
+%%           en   - English
+%%
+%%         * Text type
+%%           bsc  - B.Sc. Thesis
+%%           msc  - M.Sc. Thesis (default)
+%%           qual - PHD qualification (not tested yet)
+%%           prop - PHD proposal (not tested yet)
+%%           phd  - PHD thesis
+%%
+%%         * Media
+%%           scr  - to eletronic version (PDF) / see the users guide
+%%
+%%         * Pagination
+%%           oneside - unique face press
+%%           twoside - two faces press
+%%
+%%		   * Line spacing
+%%           singlespacing  - the same as using \linespread{1}
+%%           onehalfspacing - the same as using \linespread{1.3}
+%%           doublespacing  - the same as using \linespread{1.6}
+%%
+%% Reference commands. Use the following commands to make references in your
+%% text:
+%%          \figref  -- for Figure reference
+%%          \tabref  -- for Table reference
+%%          \eqnref  -- for equation reference
+%%          \chapref -- for chapter reference
+%%          \secref  -- for section reference
+%%          \appref  -- for appendix reference
+%%          \axiref  -- for axiom reference
+%%          \conjref -- for conjecture reference
+%%          \defref  -- for definition reference
+%%          \lemref  -- for lemma reference
+%%          \theoref -- for theorem reference
+%%          \corref  -- for corollary reference
+%%          \propref -- for proprosition reference
+%%          \pgref   -- for page reference
+%%
+%%          Example: See \chapref{chap:introduction}. It will produce
+%%                   'See Chapter 1', in case of English language.
+%%
+%% Citation commands:
+%%          \citet (from natbib) -- To cite a reference as part of the narrative
+%%          \citep (from natbib) -- To cite a reference between parenthesis
+%%          citationblock environment -- To produce direct citation blocks according to the ABNT
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ProvidesClass{ifbclass}[2018/07/23]
 
@@ -72,6 +144,46 @@
 
 \LoadClass[12pt,a4paper]{book}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% IFBTCC packages
+
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{microtype}
+\usepackage{bibentry}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{lipsum}
+\usepackage{sectsty}
+\usepackage{tikz}
+\usepackage{amsmath}
+  
+%% Set the language used in your code in the block above
+
+\captionsetup[table]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+\captionsetup[lstlisting]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+\captionsetup[figure]{position=bottom,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+
+%% Chapter and (Sub)Section fonts must be same size as text (12)
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+\subsubsectionfont{\fontsize{12}{15}\selectfont}
+
+%% Change the following pdf author attribute name to your name.
+\usepackage[linkcolor=black,
+            citecolor=black,
+            urlcolor=black,
+            colorlinks,
+            pdfpagelabels,
+            pdftitle={Rise Thesis Template (ABNT)},
+            pdfauthor={Rise Thesis Template (ABNT)},
+            breaklinks=true]{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PACKAGES
