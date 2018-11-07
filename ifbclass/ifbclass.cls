@@ -139,7 +139,7 @@
   \let\@linespacing=2}
 
 % Default options
-\ExecuteOptions{pt,bsc,print}
+\ExecuteOptions{pt,bsc,print,twoside,onehalfspacing}
 \ProcessOptions
 
 \LoadClass[12pt,a4paper]{book}
