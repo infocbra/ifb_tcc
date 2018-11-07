@@ -422,7 +422,12 @@
 
 \def\majorfieldpt#1{%
   \gdef\@majorfieldpt{#1}}
-\def\@majorfieldpt{\@notdefined}
+\def\@majorfieldpt{%
+  \if\@coursetype0
+    Ciência da Computação
+  \else\if\@coursetype1
+    Sistemas de Internet
+  \fi\fi}
 
 \def\majorfielden#1{%
   \gdef\@majorfielden{#1}}
