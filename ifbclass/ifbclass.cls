@@ -141,10 +141,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareOption{cic}{%
   \let\@campustype=0
+  \let\@degreetype=0
   \let\@coursetype=0}
 
 \DeclareOption{tsi}{%
   \let\@campustype=1
+  \let\@degreetype=7
   \let\@coursetype=1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Default options
@@ -269,6 +271,7 @@
   \gdef\@acdassignment{Trabalho Acadêmico}
   \gdef\@pccthesis{Pré Projeto}
   \gdef\@bachelordegree{Bacharel}
+  \gdef\@techdegree{Tecnólogo}
   \gdef\@mastersdegree{Mestre}
   \gdef\@phddegree{Doutor}
   \gdef\@maleadvisertitle{Orientador}
@@ -320,6 +323,7 @@
   \gdef\@acdassignment{Acadêmic Assignmnet}
   \gdef\@pccthesis{Pre-Proposal}
   \gdef\@bachelordegree{Bachelor}
+  \gdef\@techdegree{Tecnologo}
   \gdef\@mastersdegree{Master of Science}
   \gdef\@phddegree{Philosophy Doctor}
   \gdef\@maleadvisertitle{Advisor}
@@ -493,7 +497,9 @@
     \@acdassignment
   \else\if\@degreetype6
     \@pccthesis
-  \fi\fi\fi\fi\fi\fi\fi}
+  \else\if\@degreetype7
+    \@techdegree
+  \fi\fi\fi\fi\fi\fi\fi\fi}
 
 \def\@degree{%
   \if\@degreetype0
@@ -506,7 +512,9 @@
     \@phddegree
   \else\if\@degreetype4
     \@phddegree
-  \fi\fi\fi\fi\fi}
+  \else\if\@degreetype7
+    \@techdegree
+  \fi\fi\fi\fi\fi\fi}
 
 
 % IF PART OF A DEPARTMENT, USE THE FOLLOWING BLOCK AND USE \departmenten{} AND \departmentpt{} in the main text
