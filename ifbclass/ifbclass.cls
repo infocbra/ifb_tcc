@@ -138,12 +138,19 @@
 \DeclareOption{doublespacing}{%
   \let\@linespacing=2}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareOption{ctag}{%
   \let\@campustype=0}
 
 \DeclareOption{cbra}{%
   \let\@campustype=1}
 
+\DeclareOption{cic}{%
+  \let\@coursetype=0}
+
+\DeclareOption{tsi}{%
+  \let\@coursetype=1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Default options
 \ExecuteOptions{pt,bsc,print,twoside,onehalfspacing}
 \ProcessOptions
@@ -402,7 +409,12 @@
 
 \def\programpt#1{%
   \gdef\@programpt{#1}}
-\def\@programpt{\@notdefined}
+\def\@programpt{%
+  \if\@coursetype0
+    Bacharelado em Ciência da Computação
+  \else\if\@coursetype1
+    Curso Superior de Tecnologia em Sistemas para Internet
+  \fi\fi}
 
 \def\programen#1{%
   \gdef\@programen{#1}}
