@@ -694,7 +694,8 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
   \vskip\baselineskip
   \vskip\baselineskip
-  \@address/\@date
+  \@address\\
+  \@date
   \end{center}
 }
 
