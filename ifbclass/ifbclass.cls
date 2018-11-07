@@ -288,7 +288,7 @@
   \renewcommand{\bibname}{\bibliographytocname}
   \renewcommand{\appendixtocname}{Apêndice}
   \renewcommand{\appendixpagename}{Apêndice}
-  \gdef\@lstlistingname{Lista deAlgoritmos}
+  \gdef\@lstlistingname{Lista de Algoritmos}
   \gdef\@listoftablesname{Lista de Tabelas}
   \gdef\@listoffiguresname{Lista de Figuras}
   \gdef\@pagename{página}
