@@ -1,4 +1,4 @@
-%% We strongly recommend you to compile your documents using pdflatex command.
+%% Para compilar o programa, use pdflatex
 \documentclass[bsc]{ifbclass/ifbclass}
 
 \address{BRASÍLIA}
@@ -22,7 +22,7 @@
 \adviser{Nome completo do Orientador}
 \coadviser{Nome dompleto do co-orientador }
 
-% Macros (defines your own macros here, if needed)
+% Macros (Se necessario, defina suas proprias aqui)
 \def\x{\checkmark}
 %\let\lstlistoflistings\origlstoflistings
   \begin{document}
@@ -33,8 +33,10 @@
 
 \presentationpage
 
+% Quando a biblioteca prepara a ficha catalagrafica, insira-a aqui
+% Antes da defesa do trabalho, crie uma ficha falsa
 \begin{fichacatalografica}
-  \FakeFichaCatalografica % Comment this line when you have the correct file
+  \FakeFichaCatalografica
 %     \includepdf{fig_ficha_catalografica.pdf} % Uncomment this
 \end{fichacatalografica}
 
@@ -59,26 +61,26 @@ When one finds a hard problem, the more complicated it is, the more one ought to
 }
   
 \abstract
-% Write your abstract in a file called abstract.tex
+% Escreva seu abstract em ingles no arquivo abstract.tex
 {\parindent0pt
   \input{text/abstract}
 }
 
-% List of figures
+% Lista de figuras
 \listoffigures
 
 % List of Codes
 \lstlistoflistings
 
-% List of tables
+% Lista de tabelas
 \listoftables
 
-% List of acronyms
+% Lista de acronimos
 % Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
 \listofacronyms
 \input{text/acronyms}
 
-% Summary (tables of contents)
+% Sumario
 \tableofcontents
 
 \mainmatter
@@ -88,13 +90,13 @@ When one finds a hard problem, the more complicated it is, the more one ought to
 \include{text/desenv}
 \include{text/conclusion}
 
-% References
+% Referencias
 
 \begin{references}
   \bibliography{bib/references}
 \end{references}
 
-% Appendix
+% Apendice
 
 \theappendix
 \include{appendix/mapping-study}
