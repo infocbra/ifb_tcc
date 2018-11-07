@@ -1,102 +1,102 @@
 %% We strongly recommend you to compile your documents using pdflatex command.
 \documentclass[pt,twoside,onehalfspacing,bsc]{ifbclass/ifbclass}
 
-  \address{BRASÍLIA}
-  
-  \universitypt{Instituto Federal de Brasília}
-  \universityen{Federal Institute of Brasilia}
-  
-  \campus{Campus Taguatinga}
+\address{BRASÍLIA}
 
-  \programpt{Bacharelado em Ciência da Computação}
-  \programen{Bachelors in Computer Science}
-  
-  \majorfieldpt{Ciência da Computação}
-  \majorfielden{Computer Science}
-  
-  \title{Título do Trabalho }
-  
-  \date{2017}
-  
-  \author{Nome completo do Autor}
-  \adviser{Nome completo do Orientador}
-  \coadviser{Nome dompleto do co-orientador }
-  
-  % Macros (defines your own macros here, if needed)
-  \def\x{\checkmark}
-  %\let\lstlistoflistings\origlstoflistings
+\universitypt{Instituto Federal de Brasília}
+\universityen{Federal Institute of Brasilia}
+
+\campus{Campus Taguatinga}
+
+\programpt{Bacharelado em Ciência da Computação}
+\programen{Bachelors in Computer Science}
+
+\majorfieldpt{Ciência da Computação}
+\majorfielden{Computer Science}
+
+\title{Título do Trabalho }
+
+\date{2017}
+
+\author{Nome completo do Autor}
+\adviser{Nome completo do Orientador}
+\coadviser{Nome dompleto do co-orientador }
+
+% Macros (defines your own macros here, if needed)
+\def\x{\checkmark}
+%\let\lstlistoflistings\origlstoflistings
   \begin{document}
+
+\frontmatter
+
+\frontpage
+
+\presentationpage
+
+\begin{fichacatalografica}
+  \FakeFichaCatalografica % Comment this line when you have the correct file
+%     \includepdf{fig_ficha_catalografica.pdf} % Uncomment this
+\end{fichacatalografica}
+
+\banca
+
+\begin{dedicatory}
+I dedicate this thesis to all my family, friends and professors who gave me the
+necessary support to get here.
+\end{dedicatory}
   
-  \frontmatter
+\acknowledgements
+\input{text/agradecimentos}
+
+\begin{epigraph}[]{Márcio de Deus}
+When one finds a hard problem, the more complicated it is, the more one ought to work towards enlightening it's solution.
+\end{epigraph}
+
+\resumo
+% Escreva seu resumo no arquivo resumo.tex
+{\parindent0pt
+  \input{text/resumo}
+}
   
-  \frontpage
-  
-  \presentationpage
-  
-  \begin{fichacatalografica}
-    \FakeFichaCatalografica % Comment this line when you have the correct file
-  %     \includepdf{fig_ficha_catalografica.pdf} % Uncomment this
-  \end{fichacatalografica}
-  
-  \banca
-  
-  \begin{dedicatory}
-  I dedicate this thesis to all my family, friends and professors who gave me the
-  necessary support to get here.
-  \end{dedicatory}
-  
-  \acknowledgements
-  \input{text/agradecimentos}
-  
-  \begin{epigraph}[]{Márcio de Deus}
-  When one finds a hard problem, the more complicated it is, the more one ought to work towards enlightening it's solution.
-  \end{epigraph}
-  
-  \resumo
-  % Escreva seu resumo no arquivo resumo.tex
-  {\parindent0pt
-    \input{text/resumo}
-  }
-  
-  \abstract
-  % Write your abstract in a file called abstract.tex
-  {\parindent0pt
-    \input{text/abstract}
-  }
-  
-  % List of figures
-  \listoffigures
-  
-  % List of Codes
-  \lstlistoflistings
-  
-  % List of tables
-  \listoftables
-  
-  % List of acronyms
-  % Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
-  \listofacronyms
-  \input{text/acronyms}
-  
-  % Summary (tables of contents)
-  \tableofcontents
-  
-  \mainmatter
-  
-  \include{text/introduction}
-  \include{text/background}
-  \include{text/desenv}
-  \include{text/conclusion}
-  
-  % References
-  
-  \begin{references}
-    \bibliography{bib/references}
-  \end{references}
-  
-  % Appendix
-  
-  \theappendix
-  \include{appendix/mapping-study}
-  
-  \end{document}
+\abstract
+% Write your abstract in a file called abstract.tex
+{\parindent0pt
+  \input{text/abstract}
+}
+
+% List of figures
+\listoffigures
+
+% List of Codes
+\lstlistoflistings
+
+% List of tables
+\listoftables
+
+% List of acronyms
+% Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
+\listofacronyms
+\input{text/acronyms}
+
+% Summary (tables of contents)
+\tableofcontents
+
+\mainmatter
+
+\include{text/introduction}
+\include{text/background}
+\include{text/desenv}
+\include{text/conclusion}
+
+% References
+
+\begin{references}
+  \bibliography{bib/references}
+\end{references}
+
+% Appendix
+
+\theappendix
+\include{appendix/mapping-study}
+
+\end{document}
