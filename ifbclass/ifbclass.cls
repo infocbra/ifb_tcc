@@ -138,6 +138,12 @@
 \DeclareOption{doublespacing}{%
   \let\@linespacing=2}
 
+\DeclareOption{ctag}{%
+  \let\@campustype=0}
+
+\DeclareOption{cbra}{%
+  \let\@campustype=1}
+
 % Default options
 \ExecuteOptions{pt,bsc,print,twoside,onehalfspacing}
 \ProcessOptions
@@ -369,7 +375,12 @@
 
 \def\campus#1{%
   \gdef\@campus{#1}}
-\def\@campus{\textit{Campus} Taguatinga}
+\def\@campus{%
+  \if\@campustype0
+    \textit{Campus} Taguatinga
+  \else\if\@campustype1
+    \textit{Campus} Brasília
+  \fi\fi}
 
 \def\universitylogo{ifbclass/images/ifblogo}
 
