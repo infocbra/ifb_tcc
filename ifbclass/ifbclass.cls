@@ -139,16 +139,12 @@
   \let\@linespacing=2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareOption{ctag}{%
-  \let\@campustype=0}
-
-\DeclareOption{cbra}{%
-  \let\@campustype=1}
-
 \DeclareOption{cic}{%
+  \let\@campustype=0
   \let\@coursetype=0}
 
 \DeclareOption{tsi}{%
+  \let\@campustype=1
   \let\@coursetype=1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Default options
