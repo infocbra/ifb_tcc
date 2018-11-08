@@ -545,6 +545,35 @@ requirements for the degree of \@degree\ in \@majorfielden.
 \fi
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto da pagina da banca de graducao
+% TODO: unificar o texto entre os campi
+\gdef\@textodabanca{%
+  \if\@campustype0 %CIC/CTAG
+  Trabalho de graduação apresentado por \textbf{\@author} ao programa de Graduação em
+  Ciência da Computação do Instituto Federal de Brasília, sob o título \textbf{\@title}, orientado pelo \textbf{Prof.
+  \@adviser} e aprovado pela banca examinadora formada pelos professores:
+  \vspace{5\baselineskip}
+  \fi
+  \if\@campustype1 %TSI/CBRA
+  \begin{center}
+  \@author\\
+  \vspace{1\baselineskip}
+  \textbf{\@title}\\
+  \vspace{1\baselineskip}
+  \end{center}
+  Trabalho de conclusão de curso de graduação apresentado a Coordenação do Curso Superior
+  de Tecnologia em Sistemas de Internet do Instituto Federal de Brasília -- Campus Brasília, 
+  como requisito parcial para a obtenção do título de Tecnólogo em Sistemas de Internet.\\
+  \begin{center}
+  Aprovado em: \noindent\rule{1cm}{0.4pt} de \noindent\rule{3cm}{0.4pt} de \noindent\rule{1cm}{0.4pt}.\\
+  \vspace{2\baselineskip}
+  \textbf{BANCA EXAMINADORA}
+  \vfill
+  \end{center}
+  \fi
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Chapter formats
 
@@ -791,40 +820,39 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Banca
-
+\newcommand{\linhadeassinatura}{\noindent\rule{10cm}{0.4pt}}
 \def\banca{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \noindent
-  Trabalho de Graduação apresentado por \textbf{\@author} ao programa de Graduação em
-  Ciência da Computação do Instituto Federal de Brasília, sob o título \textbf{\@title}, orientado pelo \textbf{Prof.
-  \@adviser} e aprovado pela banca examinadora formada pelos professores:
+  \vfill
+  \@textodabanca
 
   \vspace{5\baselineskip}
 
   \begin{center}
 
-  -----------------------------------------------------------------------\\
+  \linhadeassinatura\\
   Prof. Fabiano Cavalcanti Fernandes\\
   Computação/IFB
-
   \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
+
+  \linhadeassinatura\\
   Prof. Leandro Vaguetti \\
   Computação/IFB
-
   \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
+
+  \linhadeassinatura\\
   Prof. Roberto Duarte Fontes\\
   Computação/IFB
-
   \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
+
+  \linhadeassinatura\\
   Prof. Raimundo Cláudio da Silva Vasconcelos\\
   Computação/IFB
-
   \vspace{\baselineskip}
-  -----------------------------------------------------------------------\\
+
+  \linhadeassinatura\\
   Prof. Daniel Saad Nogueira Nunes\\
   Computação/IFB
 
