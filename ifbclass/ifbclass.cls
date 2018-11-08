@@ -278,6 +278,8 @@
   \gdef\@femaleadvisertitle{Orientadora}
   \gdef\@malecoadvisertitle{Co-Orientador}
   \gdef\@femalecoadvisertitle{Co-Orientadora}
+  \gdef\@malemembertitle{Prof.}
+  \gdef\@femalemembertitle{Prof.ª}
   \gdef\@notdefined{NÃO DEFINIDO}
   \gdef\acknowledgementsname{Agradecimentos}
   \gdef\@axiomname{Axioma}
@@ -330,6 +332,8 @@
   \gdef\@femaleadvisertitle{Advisor}
   \gdef\@malecoadvisertitle{Co-Advisor}
   \gdef\@femalecoadvisertitle{Co-Advisor}
+  \gdef\@malemembertitle{Prof.}
+  \gdef\@femalemembertitle{Prof.ª}
   \gdef\@notdefined{UNDEFINED}
   \gdef\acknowledgementsname{Acknowledgements}
   \gdef\@axiomname{Axiom}
@@ -517,6 +521,63 @@
   \fi\fi\fi\fi\fi\fi}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\@showmembroum=0
+\def\membroum{%
+  \@ifnextchar [%
+    {\@pmembroum}%
+    {\@pmembroum[\@empty]}}
+\def\@pmembroum[#1]#2{%
+  \let\@showmembroum=1
+  \ifx#1\@empty
+    \gdef\@membroumtitle{\@malemembertitle}
+  \else
+    \gdef\@membroumtitle{\@femalemembertitle}
+  \fi
+  \gdef\@membroum{#2}}
+
+\let\@showmembrodois=0
+\def\membrodois{%
+  \@ifnextchar [%
+    {\@pmembrodois}%
+    {\@pmembrodois[\@empty]}}
+\def\@pmembrodois[#1]#2{%
+  \let\@showmembrodois=1
+  \ifx#1\@empty
+    \gdef\@membrodoistitle{\@malemembertitle}
+  \else
+    \gdef\@membrodoistitle{\@femalemembertitle}
+  \fi
+  \gdef\@membrodois{#2}}
+
+\let\@showmembrotres=0
+\def\membrotres{%
+  \@ifnextchar [%
+    {\@pmembrotres}%
+    {\@pmembrotres[\@empty]}}
+\def\@pmembrotres[#1]#2{%
+  \let\@showmembrotres=1
+  \ifx#1\@empty
+    \gdef\@membrotrestitle{\@malemembertitle}
+  \else
+    \gdef\@membrotrestitle{\@femalemembertitle}
+  \fi
+  \gdef\@membrotres{#2}}
+
+\let\@showmembroquatro=0
+\def\membroquatro{%
+  \@ifnextchar [%
+    {\@pmembroquatro}%
+    {\@pmembroquatro[\@empty]}}
+\def\@pmembroquatro[#1]#2{%
+  \let\@showmembroquatro=1
+  \ifx#1\@empty
+    \gdef\@membroquatrotitle{\@malemembertitle}
+  \else
+    \gdef\@membroquatrotitle{\@femalemembertitle}
+  \fi
+  \gdef\@membroquatro{#2}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IF PART OF A DEPARTMENT, USE THE FOLLOWING BLOCK AND USE \departmenten{} AND \departmentpt{} in the main text
 % \gdef\@presentationtext{%
 % \if\@language0
@@ -548,6 +609,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Texto da pagina da banca de graducao
 % TODO: unificar o texto entre os campi
+% TODO: usar degree/majorfieldpt
 \gdef\@textodabanca{%
   \if\@campustype0 %CIC/CTAG
   Trabalho de graduação apresentado por \textbf{\@author} ao programa de Graduação em
@@ -828,33 +890,42 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \vfill
   \@textodabanca
 
-  \vspace{5\baselineskip}
+  \vfill
 
   \begin{center}
 
   \linhadeassinatura\\
-  Prof. Fabiano Cavalcanti Fernandes\\
+  Prof. \@adviser\\
   Computação/IFB
   \vspace{\baselineskip}
 
+\if\@showmembroum1{
   \linhadeassinatura\\
-  Prof. Leandro Vaguetti \\
+  \@membroumtitle \ \@membroum \\
   Computação/IFB
   \vspace{\baselineskip}
+}\fi
 
+\if\@showmembrodois1{
   \linhadeassinatura\\
-  Prof. Roberto Duarte Fontes\\
+  \@membrodoistitle \ \@membrodois \\
   Computação/IFB
   \vspace{\baselineskip}
+}\fi
 
+\if\@showmembrotres1{
   \linhadeassinatura\\
-  Prof. Raimundo Cláudio da Silva Vasconcelos\\
+  \@membrotrestitle \ \@membrotres \\
   Computação/IFB
   \vspace{\baselineskip}
+}\fi
 
+\if\@showmembroquatro1{
   \linhadeassinatura\\
-  Prof. Daniel Saad Nogueira Nunes\\
+  \@membroquatrotitle \ \@membroquatro \\
   Computação/IFB
+  \vspace{\baselineskip}
+}\fi
 
   \vfill
   \@address
