@@ -42,14 +42,18 @@
 
 \banca
 
+%Comente/Remova todo o conteudo entre \begin{dedicatory} e \end{dedicatory} para remover.
 \begin{dedicatory} %OPCIONAL
 Dedico este trabalho à minha família.
 \end{dedicatory}
   
-\acknowledgements %OPCIONAL
+\acknowledgements %OPCIONAL Comente a linha abaixo para remover.
 \input{text/agradecimentos}
 
+%Novamente, comente todo conteudo entre {epigraph} para remover
 \begin{epigraph}[]{Nome do autor} %OPCIONAL
+Elemento opcional.
+
 Espaço destinado à epígrafe (elemento opcional). Nesta folha, o autor usa uma citação, seguida de indicação de autoria e ano, relacionada com a matéria tratada no corpo do trabalho.
 \end{epigraph}
 
@@ -65,10 +69,12 @@ Espaço destinado à epígrafe (elemento opcional). Nesta folha, o autor usa uma
   \input{text/abstract}
 }
 
+%ATENCAO.
+%Se alguma dessas listas estiver vazia no seu trabalho, comente a linha com um '%'
 % Lista de figuras
 \listoffigures
 
-% List of Codes
+% Lista de algortimos
 \lstlistoflistings
 
 % Lista de tabelas
@@ -84,6 +90,7 @@ Espaço destinado à epígrafe (elemento opcional). Nesta folha, o autor usa uma
 
 \mainmatter
 
+%Para cada seção do seu trabalho, edite o arquivo .tex na pasta text/
 \include{text/introduction}
 \include{text/background}
 \include{text/desenv}
