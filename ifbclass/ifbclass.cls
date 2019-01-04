@@ -192,8 +192,8 @@
             urlcolor=black,
             colorlinks,
             pdfpagelabels,
-            pdftitle={Rise Thesis Template (ABNT)},
-            pdfauthor={Rise Thesis Template (ABNT)},
+            pdftitle={TCC IFB},
+            pdfauthor={TCC IFB},
             breaklinks=true]{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
