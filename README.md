@@ -1,20 +1,15 @@
 # IFB TCC model
 
-## Live Preview:
-  The live preview is available in the ShareLatex website (Might be a few minor version behind)
-  
-  - IFBtcc : https://www.sharelatex.com/templates/5ab7b4a46004ddcd341b36ce
-
 ## How to propperly Download:
 
-You can download the latest release from the [Download Page](https://github.com/IFBmodels/tcc/releases/latest), or clone this repository recursively:
+You can download the latest release from the [Download Page] (https://github.com/infocbra/ifb_tcc), or clone this repository recursively:
 
-    git clone  --recursive https://github.com/IFBmodels/tcc
+    git clone https://github.com/infocbra/ifb_tcc
 
 
 ## The Project
 
-The IFB Tcc Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by IFB's Computer Science Researches and it was initially based on RiSE Thesis from UFPE. The manual of IFB Thesis is still valid for the IFB Tcc template.
+The IFB Tcc Latex Template is a project for providing an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It is developed by IFB CBRA and it was initially based on RiSE Thesis from UFPE and IFB's Computer Science Researches. The manual of IFB Thesis is still valid for the IFB Tcc template.
 
 The template is also a good start point for developing your own latex class. So, feel free to reuse it anywhere for any purpose.
 
