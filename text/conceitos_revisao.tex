@@ -11,12 +11,26 @@ deve ser inserida.  Voce pode referenciar capítulos e seções adicionando labe
 à elas. Por exemplo, descrevemos a introdução no Capítulo
 \ref{chp:introduction}.
 
-\begin{figure}[htb]
+\begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.45\textwidth]{images/figura.png}
     \caption{Exemplo de como inserir Figura}
+    \includegraphics[width=0.45\textwidth]{images/figura.png}
     \label{fig:exemplo}
 \end{figure}
+
+%Voce pode forcar a troca de pagina da seguinte forma:
+\newpage
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Exemplo de como inserir Figura retirado de um site - Arduino Uno}
+    \includegraphics[width=0.35\textwidth]{images/uno.png}
+
+    {\footnotesize Fonte: Página oficial do Arduino\protect\footnotemark}
+    \label{fig:arduino_uno}
+\end{figure}
+\footnotetext{Disponível em: <https://www.arduino.cc/en/Main/ArduinoBoardUno>. Acesso em ago. 1999.}
+
 %Altere o numero junto ao 'width' para acertar o tamanho da figura. Coloque
 %numeros maior que 0 e até 1
 
