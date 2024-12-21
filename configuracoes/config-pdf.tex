@@ -1,0 +1,50 @@
+% ----------------------------------------------------------------------------
+%                    CONFIGURAÇÕES DE APARÊNCIA DO PDF FINAL
+% ----------------------------------------------------------------------------
+\makeatletter
+\hypersetup{%
+    portuguese,
+    colorlinks=false,  % Define se os "links" ficarão coloridos
+    linkcolor=blue,    % Define cor dos "links" internos
+    citecolor=blue,    % Define cor dos "links" para as referências bibliográficas
+    filecolor=blue,    % Define cor dos "links" para arquivos
+    urlcolor=blue,     % Define a cor dos "hiperlinks"
+    breaklinks=true,   % Ativa quebra de links longos em várias linhas
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfkeywords={abnt, latex, abntex, abntex2}
+}
+\makeatother
+\makeindex % Cria indice remissivo
+
+% ----------------------------------------------------------------------------
+%                           OUTRAS CONFIGURACOES
+% ----------------------------------------------------------------------------
+
+% Renomeação de Labels para Referências Cruzadas
+\renewcommand{\algorithmautorefname}{Algoritmo}
+\def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
+
+\crefname{chapter}{Cap.}{Caps.}
+\Crefname{chapter}{Capítulo}{Capítulos}
+
+\crefname{section}{Sec.}{Sec.}
+\Crefname{section}{Seção}{Seções}
+
+\crefname{subsection}{Subsec.}{Subsec.}
+\Crefname{subsection}{Subseção}{Subseções}
+
+\crefname{table}{Tab.}{Tabs.}
+\Crefname{table}{Tabela}{Tabelas}
+
+% Hifenização de palavras que não estão no dicionário
+\hyphenation{%
+    qua-dros-cha-ve
+    Kat-sa-gge-los
+}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}} % Centralizar conteúdo da célula
+
+\captionsetup{font=small, singlelinecheck=true, skip = -1pt} % Configura a legenda dos elementos dos /dados
+
+\allowdisplaybreaks % Permite quebra de página no ambiente align

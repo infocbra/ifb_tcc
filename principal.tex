@@ -1,0 +1,73 @@
+% ---------------------------------------------------------------------------------------------------------------
+%                       TEMPLATE PARA TRABALHO DE CONCLUSÃO DE CURSO
+% ---------------------------------------------------------------------------------------------------------------
+% Projeto Original: Template com Customização da classe abnTeX2 para as normas da UTFPR 
+% Autores: Diego Marczal
+%         Michael Vornes <https://github.com/mvornes>
+%
+% Modificado por: Gabriel Cabral
+% Modificado em 16/12/2024 por: Arthur Damacena Silva, Eduardo Vieira Campos e Guilherme Alves Rabelo % a partir da versão de Gabriel Cabral. Adaptação para o curso de TSI - Campus Brasília
+%----------------------------------------------------------------------------------------------------------------
+% Codificação: UTF-8
+% LaTeX:  abnTeX2
+% ---------------------------------------------------------------------------------------------------------------
+
+% ---------------------------------------------------------------------------------------------------------------
+%                                          CARREGA CLASSE PERSONALIZADA
+% ---------------------------------------------------------------------------------------------------------------
+\documentclass[%twoside,                   % Impressão em frente e verso
+    	        oneside,                   % Impressão apenas frente
+]{configuracoes/norma-abntex2}
+
+% ---------------------------------------------------------------------------------------------------------------
+%                                        INCLUI ARQUIVOS DE CONFIGURAÇÕES
+% ---------------------------------------------------------------------------------------------------------------
+\input{configuracoes/pacotes}
+\input{configuracoes/config-pdf}
+
+% ---------------------------------------------------------------------------------------------------------------
+%                                 INCLUI ARQUIVOS DO TRABALHO DE CONCLUSÃO DE CURSO
+% ---------------------------------------------------------------------------------------------------------------
+
+% Insere capa e folha de rosto
+\input{estrutura/pre-textuais/capa}
+\input{estrutura/pre-textuais/folha-rosto}
+\input{estrutura/pre-textuais/folha-aprovacao}
+
+\begin{document}
+
+    \pretextual
+    \imprimircapa                                     % Comando para imprimir Capa
+    \imprimirfolhaderosto{}                           % Comando para imprimir Folha de rosto
+    %\includepdf{ficha-catalografica.pdf}             % Comando para inserir Ficha catalográfica
+    \imprimirfolhadeaprovacao{}                       % Comando para imprimir Folha de aprovação temporária
+    
+    % Insere elementos pré-textuais
+    \include{estrutura/pre-textuais/dedicatoria}          		% Dedicatória
+    \include{estrutura/pre-textuais/agradecimentos}        		% Agradecimentos
+    \include{estrutura/pre-textuais/epigrafe}              		% Epígrafe
+    \include{estrutura/pre-textuais/resumo}             		% Resumo em Português
+    \include{estrutura/pre-textuais/abstract}             		% Resumo em Inglês
+    \include{estrutura/pre-textuais/listas/lista-figuras}       % Lista de Figuras
+    \include{estrutura/pre-textuais/listas/lista-quadros}       % Lista de Quadros
+    \include{estrutura/pre-textuais/listas/lista-tabelas}       % Lista de Tabelas
+    \include{estrutura/pre-textuais/listas/lista-siglas}        % Lista de Abreviaturas e Siglas
+    \include{estrutura/pre-textuais/listas/lista-simbolos}      % Lista de Símbolos
+    \include{estrutura/pre-textuais/listas/lista-algoritmos}    % Lista de Algoritmos
+    \include{estrutura/pre-textuais/sumario}               		% Sumário
+    
+    \textual
+    % Insere elementos textuais
+    \include{estrutura/textuais/introducao}                		         % Introdução
+    \include{estrutura/textuais/desenvolvimento/fundamentacao}           % Fundamentação teórica
+    \include{estrutura/textuais/desenvolvimento/metodologia}             % Metodologia
+    \include{estrutura/textuais/desenvolvimento/resultados}              % Resultados
+    \include{estrutura/textuais/conclusao}                 			     % Conclusão
+    
+    \postextual
+    % Insere elementos pós-textuais
+    \include{estrutura/pos-textuais/referencias}           			   % Referências
+    \include{estrutura/pos-textuais/apendices}             			   % Apêndices
+    \include{estrutura/pos-textuais/anexos}               			   % Anexos
+
+\end{document}
