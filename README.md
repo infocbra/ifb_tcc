@@ -2,12 +2,14 @@
 
 Este repositório disponibiliza um template LaTeX para trabalhos de conclusão de curso (TCC) do curso de Tecnologia em Sistemas para Internet (TSI) do Instituto Federal de Brasília (IFB) - Campus Brasília.
 
-O template foi projetado para auxiliar os estudantes a atenderem às normas acadêmicas e estilísticas exigidas pelo curso, utilizando o pacote **abnTeX2**.
+O template foi atualizado para auxiliar os estudantes a atenderem às normas acadêmicas e estilísticas exigidas pelo curso (normaliza ifb), utilizando o pacote **abnTeX2**.
 
 ## Site Oficial do abnTeX
+
 Para mais informações sobre o abnTeX2, consulte o [site oficial](https://www.abntex.net.br/).
 
 ## Manuais do abnTeX2
+
 O template utiliza o pacote **abnTeX2** para atender às normas brasileiras de trabalhos acadêmicos. Para uma referência completa sobre as funcionalidades do pacote, estilos de citação e formatação de referências, consulte os manuais:
 
 1. [Manual principal do abnTeX2](https://br.mirrors.cicku.me/ctan/macros/latex/contrib/abntex2/doc/abntex2.pdf): Documentação abrangente sobre o pacote e suas macros.
