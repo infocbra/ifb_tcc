@@ -65,7 +65,7 @@
 %\counterwithout{equation}{chapter}
 
 % Define a numeraçao das equaçoes por capitulo
-\counterwithin{figure}{chapter}
+% \counterwithin{figure}{chapter}
 
 % -----------------------------------------------------------------------------
 %                              COMANDOS DE DADOS
