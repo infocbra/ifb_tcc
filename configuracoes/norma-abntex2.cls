@@ -173,7 +173,6 @@
 % Elementos pré-textuais
 \renewcommand{\pretextual}
 {%
-    \pagenumbering{gobble}
     \aliaspagestyle{chapter}{empty}
     \pagestyle{empty}
     \aliaspagestyle{cleared}{empty}
@@ -184,7 +183,6 @@
 \renewcommand{\textual}
 {%
     \pagestyle{simple}
-    \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
     %\pagestyle{abntheadings} % Cabeçalho com numeraçao e nome do capitulo
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
